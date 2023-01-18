@@ -1,0 +1,27 @@
+{
+  "name": "api-authentication",
+  "version": "1.0.0",
+  "description": "this is done by using Node Js and Express JS and JWT",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shriram-17/API-Authentication.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shriram-17/API-Authentication/issues"
+  },
+  "homepage": "https://github.com/shriram-17/API-Authentication#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.4",
+    "nodemon": "^2.0.20"
+  }
+}
