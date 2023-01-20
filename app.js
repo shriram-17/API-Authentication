@@ -6,8 +6,10 @@ const app=express();
 app.use(express.json())
 
 const userRoute=require('./routes/auth')
-app.use('/api/users/',userRoute);
+const postRoute=require('./routes/post')
 
+app.use('/api/users/',userRoute);
+app.use('/api/posts/',postRoute);
 
 app.get('/',(req,res)=>{
     res.send("Hello")

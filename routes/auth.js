@@ -56,14 +56,13 @@ router.post('/login',async (req,res) => {
     }
    
     const validpass =await bcrypt.compare(req.body.password,user.password)
-    if(validpass)
-    {
-        return res.status(200).send(`${user.name} logged In`)
-    }
-    else
+    if(!validpass)
     {
         return res.status(400).send('Invalid Password')
     }
+    const token = JWT.sign({_id:user._id},process.env.TOKEN_SECRET)
+
+    res.header('auth-token',token).send(token)
 })
 
 module.exports=router;
